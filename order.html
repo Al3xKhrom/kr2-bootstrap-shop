@@ -1,162 +1,78 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная — Bootstrap Shop</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/custom.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ATMO — необычные лампы, люстры и дизайнерские светильники.">
+  <title>Оформление заказа — ATMO</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-<h1>Bootstrap Shop</h1>
-<header class="bg-primary text-white py-4">
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-light" aria-label="Основная навигация">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-8">
-                <h1 class="h3 mb-1">Bootstrap Shop</h1>
-                <p class="mb-0 opacity-75">
-                    Учебный интернет-магазин на Bootstrap
-                </p>
-            </div>
-            <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-        <span class="badge bg-light text-primary">
-          КР №2
-        </span>
-            </div>
-        </div>
+      <a class="navbar-brand brand" href="index.html" aria-label="ATMO — на главную">ATMO<span>.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3"><li class="nav-item"><a class="nav-link "  href="index.html">Главная</a></li>
+<li class="nav-item"><a class="nav-link "  href="catalog.html">Каталог</a></li>
+<li class="nav-item"><a class="nav-link "  href="product.html">Лава-лампа</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Заказ</a></li></ul>
+        <a class="btn btn-brand ms-lg-4 mt-3 mt-lg-0" href="order.html">Оформить заказ</a>
+      </div>
     </div>
+  </nav>
 </header>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
-
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Переключить навигацию"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Главная</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="catalog.html">Каталог</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="product.html">Товар</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="order.html">Заявка</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                    >
-                        Дополнительно
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
-                        <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
-                        <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<main class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-12 col-lg-8">
-            <div class="card shadow-sm">
-                <div class="card-header bg-primary text-white">
-                    <h1 class="h4 mb-0">Форма заявки</h1>
-                </div>
-
-                <div class="card-body">
-                    <div class="alert alert-info" role="alert">
-                        Заполните форму. Поля со звёздочкой являются обязательными.
-                    </div>
-
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-12 col-md-6">
-                                <label for="order-name" class="form-label">Имя *</label>
-                                <input id="order-name" name="name" type="text" class="form-control" required>
-                            </div>
-
-                            <div class="col-12 col-md-6">
-                                <label for="order-email" class="form-label">E-mail *</label>
-                                <input id="order-email" name="email" type="email" class="form-control" required>
-                            </div>
-
-                            <div class="col-12 col-md-6">
-                                <label for="order-phone" class="form-label">Телефон</label>
-                                <div class="input-group">
-                                    <span class="input-group-text">+7</span>
-                                    <input id="order-phone" name="phone" type="tel" class="form-control" placeholder="900 000-00-00">
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-md-6">
-                                <label for="order-product" class="form-label">Товар</label>
-                                <select id="order-product" name="product" class="form-select">
-                                    <option selected>Выберите товар</option>
-                                    <option value="product-1">Товар 1</option>
-                                    <option value="product-2">Товар 2</option>
-                                    <option value="product-3">Товар 3</option>
-                                </select>
-                            </div>
-
-                            <div class="col-12">
-                                <label for="order-comment" class="form-label">Комментарий</label>
-                                <textarea id="order-comment" name="comment" class="form-control" rows="4"></textarea>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form-check">
-                                    <input id="order-agree" class="form-check-input" type="checkbox" required>
-                                    <label class="form-check-label" for="order-agree">
-                                        Я согласен на обработку данных *
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="col-12 d-flex gap-2">
-                                <button class="btn btn-primary" type="submit">
-                                    Отправить заявку
-                                </button>
-                                <button class="btn btn-outline-secondary" type="reset">
-                                    Очистить
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<main>
+<section class="page-hero py-5"><div class="container"><span class="eyebrow">ATMO — ЗАЯВКА</span><h1 class="mt-2">Оформление заказа</h1><p class="page-lead mb-0">Заполни форму — и выбранный светильник станет на шаг ближе.</p></div></section>
+<section class="container section-space"><div class="row justify-content-center g-4">
+  <div class="col-12 col-lg-8"><div class="order-card">
+    <div class="alert alert-info border-0" role="note">Поля со звёздочкой обязательны. Форма создана для демонстрации Bootstrap: заявки не сохраняются и не отправляются.</div>
+    <h2 class="h4 mb-4">Контактные данные</h2>
+    <form id="orderForm" novalidate><div class="row g-3">
+      <div class="col-12 col-md-6"><label class="form-label" for="orderName">Имя *</label><input id="orderName" name="name" class="form-control" type="text" autocomplete="name" required></div>
+      <div class="col-12 col-md-6"><label class="form-label" for="orderEmail">E-mail *</label><input id="orderEmail" name="email" class="form-control" type="email" autocomplete="email" required></div>
+      <div class="col-12 col-md-6"><label class="form-label" for="orderPhone">Телефон *</label><div class="input-group"><span class="input-group-text">+7</span><input id="orderPhone" name="phone" class="form-control" type="tel" autocomplete="tel-national" placeholder="900 000-00-00" required></div></div>
+      <div class="col-12 col-md-6"><label class="form-label" for="orderProduct">Выбранный товар *</label><select id="orderProduct" name="product" class="form-select" required><option value="">Выберите товар</option><option value="lava">Лава-лампа «Магма» — 3 990 ₽</option><option value="crystal">Люстра «Кристалл» — 28 900 ₽</option><option value="loft">Люстра «Лофт» — 14 900 ₽</option><option value="game">3D-лампа «Game Zone» — 2 490 ₽</option></select></div>
+      <div class="col-12 col-md-6"><label class="form-label" for="orderQuantity">Количество</label><select id="orderQuantity" name="quantity" class="form-select"><option value="1">1 шт.</option><option value="2">2 шт.</option><option value="3">3 шт.</option></select></div>
+      <div class="col-12"><label class="form-label" for="orderComment">Комментарий к заказу</label><textarea id="orderComment" name="comment" class="form-control" rows="4" placeholder="Например: хочу подарить другу"></textarea></div>
+      <div class="col-12"><div class="form-check"><input class="form-check-input" id="orderAgree" name="agree" type="checkbox" required><label class="form-check-label" for="orderAgree">Я согласен на обработку персональных данных *</label></div></div>
+      <div class="col-12"><div class="alert alert-success d-none" id="orderSuccess" role="status" aria-live="polite"></div></div>
+      <div class="col-12 d-flex gap-3 flex-wrap"><button type="submit" class="btn btn-brand btn-lg">Отправить заявку</button><button type="reset" class="btn btn-outline-brand btn-lg">Очистить</button></div>
+    </div></form>
+  </div></div>
+  <div class="col-12 col-lg-4"><div class="order-info-card"><span class="eyebrow">ВАЖНО</span><h2 class="h4 mt-2">Как это работает</h2><p>1. Выбери модель в каталоге.</p><p>2. Заполни форму.</p><p class="mb-0">3. Получи демонстрационное подтверждение на экране.</p><hr><p class="small text-secondary mb-0">Для реальных заказов понадобится серверная часть. Она не требуется в КР №2.</p></div></div>
+</div></section>
 </main>
-
-<script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
+<footer class="site-footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-5">
+        <a class="footer-brand" href="index.html">ATMO<span>.</span></a>
+        <p class="footer-muted mt-3 mb-0">Необычные лампы и люстры для уютного дома и ярких идей.</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <h2 class="h6 footer-title">Разделы</h2>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="product.html">Лава-лампа</a></li>
+          <li><a href="order.html">Оформить заказ</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4">
+        <h2 class="h6 footer-title">О магазине</h2>
+        <p class="footer-muted mb-2">Авторские светильники, которые создают настроение.</p>
+        <p class="footer-muted mb-0">Это учебный интернет-магазин. Заказы не отправляются на сервер.</p>
+      </div>
+    </div>
+    <div class="footer-bottom mt-4 pt-3">© 2026 ATMO.</div>
+  </div>
+</footer>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

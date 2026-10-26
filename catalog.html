@@ -1,222 +1,134 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог — Bootstrap Shop</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/custom.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ATMO — необычные лампы, люстры и дизайнерские светильники.">
+  <title>Каталог — ATMO</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="bg-light">
-<h1>Bootstrap Shop</h1>
-<header class="bg-primary text-white py-4">
+<body>
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-light" aria-label="Основная навигация">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-8">
-                <h1 class="h3 mb-1">Bootstrap Shop</h1>
-                <p class="mb-0 opacity-75">
-                    Учебный интернет-магазин на Bootstrap
-                </p>
-            </div>
-            <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-        <span class="badge bg-light text-primary">
-          КР №2
-        </span>
-            </div>
-        </div>
+      <a class="navbar-brand brand" href="index.html" aria-label="ATMO — на главную">ATMO<span>.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3"><li class="nav-item"><a class="nav-link "  href="index.html">Главная</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a></li>
+<li class="nav-item"><a class="nav-link "  href="product.html">Лава-лампа</a></li>
+<li class="nav-item"><a class="nav-link "  href="order.html">Заказ</a></li></ul>
+        <a class="btn btn-brand ms-lg-4 mt-3 mt-lg-0" href="order.html">Оформить заказ</a>
+      </div>
     </div>
+  </nav>
 </header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">Bootstrap Shop</a>
-        <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar"
-                aria-expanded="false"
-                aria-label="Переключить навигацию"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Главная</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="catalog.html">Каталог</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="product.html">Товар</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="order.html">Заявка</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            role="button"
-                            data-bs-toggle="dropdown"
-                            aria-expanded="false"
-                    >
-                        Дополнительно
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="catalog.html">Все товары</a></li>
-                        <li><a class="dropdown-item" href="order.html">Оформить заявку</a></li>
-                        <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+<main>
+<section class="page-hero py-5"><div class="container"><span class="eyebrow">КОЛЛЕКЦИЯ ATMO</span><h1 class="mt-2">Каталог светильников</h1><p class="page-lead mb-0">Четыре разные идеи, чтобы дома стало ярче.</p></div></section>
+<section class="container section-space">
+  <div class="alert alert-success border-0 mb-4" role="status">Найди свой светильник: используй поиск, категорию или сортировку.</div>
+  <div class="filter-panel mb-4">
+    <div class="row g-3 align-items-end">
+      <div class="col-12 col-md-5"><label class="form-label" for="searchInput">Поиск по названию</label><input id="searchInput" class="form-control" placeholder="Например, лава или люстра" type="search"></div>
+      <div class="col-12 col-md-3"><label class="form-label" for="categoryFilter">Категория</label><select id="categoryFilter" class="form-select"><option value="all">Все категории</option><option value="lamp">Настольные лампы</option><option value="chandelier">Люстры</option><option value="night">Ночные светильники</option></select></div>
+      <div class="col-12 col-md-3"><label class="form-label" for="sortSelect">Сортировка</label><select id="sortSelect" class="form-select"><option value="default">По умолчанию</option><option value="cheap">Сначала дешевле</option><option value="expensive">Сначала дороже</option><option value="name">По названию</option></select></div>
+      <div class="col-12 col-md-1"><button id="resetFilters" class="btn btn-outline-brand w-100" type="button" title="Сбросить фильтры" aria-label="Сбросить фильтры">↺</button></div>
     </div>
-</nav>
-
-<main class="container my-5">
-    <div class="alert alert-info" role="alert">
-        Выберите товар из каталога. Карточки товаров оформлены с помощью компонента Bootstrap `card`.
-    </div>
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="h2 mb-0">Каталог товаров</h1>
-        <a class="btn btn-outline-primary" href="order.html">
-            Оставить заявку
-        </a>
-    </div>
-    <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <h2 class="card-title h5">Товар 1</h2>
-                        <span class="badge bg-success">Новинка</span>
-                    </div>
-                    <p class="card-text text-muted">
-                        Краткое описание учебного товара для каталога.
-                    </p>
-                    <p class="fw-bold fs-5 mt-auto">1000 руб.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary" href="product.html">Подробнее</a>
-                        <button
-                                class="btn btn-outline-primary"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#orderModal"
-                        >
-                            Заказать
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <h2 class="card-title h5">Товар 2</h2>
-                        <span class="badge bg-warning text-dark">Хит</span>
-                    </div>
-                    <p class="card-text text-muted">
-                        Краткое описание второго учебного товара.
-                    </p>
-                    <p class="fw-bold fs-5 mt-auto">1500 руб.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary" href="product.html">Подробнее</a>
-                        <button
-                                class="btn btn-outline-primary"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#orderModal"
-                        >
-                            Заказать
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 shadow-sm">
-                <div class="card-body d-flex flex-column">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <h2 class="card-title h5">Товар 3</h2>
-                        <span class="badge bg-danger">Скидка</span>
-                    </div>
-                    <p class="card-text text-muted">
-                        Краткое описание третьего учебного товара.
-                    </p>
-                    <p class="fw-bold fs-5 mt-auto">2000 руб.</p>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary" href="product.html">Подробнее</a>
-                        <button
-                                class="btn btn-outline-primary"
-                                type="button"
-                                data-bs-toggle="modal"
-                                data-bs-target="#orderModal"
-                        >
-                            Заказать
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div
-            class="modal fade"
-            id="orderModal"
-            tabindex="-1"
-            aria-labelledby="orderModalLabel"
-            aria-hidden="true"
-    >
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title h5" id="orderModalLabel">
-                        Быстрая заявка
-                    </h2>
-                    <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Закрыть"
-                    ></button>
-                </div>
-                <div class="modal-body">
-                    <p class="text-muted">
-                        Оставьте контактные данные, и менеджер свяжется с вами.
-                    </p>
-                    <form>
-                        <div class="mb-3">
-                            <label for="modal-name" class="form-label">Имя</label>
-                            <input id="modal-name" type="text" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="modal-phone" class="form-label">Телефон</label>
-                            <input id="modal-phone" type="tel" class="form-control" required>
-                        </div>
-                        <div class="form-check mb-3">
-                            <input id="modal-agree" class="form-check-input" type="checkbox" required>
-                            <label class="form-check-label" for="modal-agree">
-                                Согласен на обработку данных
-                            </label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                        Закрыть
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                        Отправить
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
+  <div class="d-flex align-items-center justify-content-between mb-3"><h2 class="h5 mb-0">Все модели</h2><span class="text-secondary" id="productCount" aria-live="polite">Найдено: 4</span></div>
+  <div class="row g-4" id="productsList">
+<div class="col-12 col-sm-6 col-lg-3 catalog-item" data-name="лава-лампа «магма»" data-category="lamp" data-price="3990" data-default="0">
+<div class="product-card card h-100">
+  <div class="product-photo"><span class="product-badge badge">Хит продаж</span><img src="images/lava-lamp.png" alt="Лава-лампа «Магма»" loading="lazy"></div>
+  <div class="card-body d-flex flex-column">
+    <div class="product-category">Настольные лампы</div>
+    <h3 class="h5 card-title">Лава-лампа «Магма»</h3>
+    <p class="card-text text-secondary">Тёплое янтарное свечение и плавное движение воска.</p>
+    <div class="product-price mt-auto">3 990 ₽</div>
+    <div class="d-flex gap-2 flex-wrap mt-3"><a class="btn btn-brand" href="product.html">Подробнее</a><a class="btn btn-outline-brand" href="order.html?product=lava">Заказать</a></div>
+  </div>
+</div>
+</div><div class="col-12 col-sm-6 col-lg-3 catalog-item" data-name="люстра «кристалл»" data-category="chandelier" data-price="28900" data-default="1">
+<div class="product-card card h-100">
+  <div class="product-photo"><span class="product-badge badge">Премиум</span><img src="images/crystal-chandelier.png" alt="Люстра «Кристалл»" loading="lazy"></div>
+  <div class="card-body d-flex flex-column">
+    <div class="product-category">Люстры</div>
+    <h3 class="h5 card-title">Люстра «Кристалл»</h3>
+    <p class="card-text text-secondary">Золотой каркас и искрящиеся хрустальные подвески.</p>
+    <div class="product-price mt-auto">28 900 ₽</div>
+    <div class="d-flex gap-2 flex-wrap mt-3"><a class="btn btn-brand" href="order.html?product=crystal">Заказать</a></div>
+  </div>
+</div>
+</div><div class="col-12 col-sm-6 col-lg-3 catalog-item" data-name="люстра «лофт»" data-category="chandelier" data-price="14900" data-default="2">
+<div class="product-card card h-100">
+  <div class="product-photo"><span class="product-badge badge">Новинка</span><img src="images/loft-chandelier.png" alt="Люстра «Лофт»" loading="lazy"></div>
+  <div class="card-body d-flex flex-column">
+    <div class="product-category">Люстры</div>
+    <h3 class="h5 card-title">Люстра «Лофт»</h3>
+    <p class="card-text text-secondary">Геометричная конструкция в строгом тёмном металле.</p>
+    <div class="product-price mt-auto">14 900 ₽</div>
+    <div class="d-flex gap-2 flex-wrap mt-3"><a class="btn btn-brand" href="order.html?product=loft">Заказать</a></div>
+  </div>
+</div>
+</div><div class="col-12 col-sm-6 col-lg-3 catalog-item" data-name="3d-лампа «game zone»" data-category="night" data-price="2490" data-default="3">
+<div class="product-card card h-100">
+  <div class="product-photo"><span class="product-badge badge">Подарок</span><img src="images/gaming-lamp.png" alt="3D-лампа «Game Zone»" loading="lazy"></div>
+  <div class="card-body d-flex flex-column">
+    <div class="product-category">Ночные светильники</div>
+    <h3 class="h5 card-title">3D-лампа «Game Zone»</h3>
+    <p class="card-text text-secondary">Неоновое настроение и разноцветная подсветка.</p>
+    <div class="product-price mt-auto">2 490 ₽</div>
+    <div class="d-flex gap-2 flex-wrap mt-3"><a class="btn btn-brand" href="order.html?product=game">Заказать</a></div>
+  </div>
+</div>
+</div>
+  </div>
+  <div class="alert alert-warning mt-4 d-none" id="emptyCatalog" role="status">По вашему запросу ничего не найдено. Попробуйте другую категорию или очистите поиск.</div>
+  <div class="text-center mt-5"><button type="button" class="btn btn-brand btn-lg" data-bs-toggle="modal" data-bs-target="#quickOrderModal">Быстрый заказ</button></div>
+</section>
+<div class="modal fade" id="quickOrderModal" tabindex="-1" aria-labelledby="quickOrderTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content rounded-4 border-0">
+    <div class="modal-header"><h2 class="modal-title h5" id="quickOrderTitle">Быстрый заказ</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button></div>
+    <form id="quickOrderForm"><div class="modal-body">
+      <div class="mb-3"><label class="form-label" for="quickName">Ваше имя *</label><input class="form-control" id="quickName" name="name" required></div>
+      <div class="mb-3"><label class="form-label" for="quickPhone">Телефон *</label><input class="form-control" id="quickPhone" name="phone" type="tel" required placeholder="+7 900 000-00-00"></div>
+      <div class="mb-3"><label class="form-label" for="quickProduct">Товар</label><select class="form-select" id="quickProduct" name="product"><option value="lava">Лава-лампа «Магма»</option><option value="crystal">Люстра «Кристалл»</option><option value="loft">Люстра «Лофт»</option><option value="game">3D-лампа «Game Zone»</option></select></div>
+      <div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="quickAgree" name="agree" required><label class="form-check-label" for="quickAgree">Согласен на обработку данных *</label></div>
+      <div id="quickMessage" class="alert alert-success d-none" role="status"></div>
+      <p class="small text-secondary mb-0">Демонстрация: заявка не отправляется на сервер.</p>
+    </div><div class="modal-footer"><button class="btn btn-outline-secondary" data-bs-dismiss="modal" type="button">Закрыть</button><button class="btn btn-brand" type="submit">Отправить</button></div></form>
+  </div></div>
+</div>
 </main>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-</script>
+<footer class="site-footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-12 col-md-5">
+        <a class="footer-brand" href="index.html">ATMO<span>.</span></a>
+        <p class="footer-muted mt-3 mb-0">Необычные лампы и люстры для уютного дома и ярких идей.</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <h2 class="h6 footer-title">Разделы</h2>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="product.html">Лава-лампа</a></li>
+          <li><a href="order.html">Оформить заказ</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4">
+        <h2 class="h6 footer-title">О магазине</h2>
+        <p class="footer-muted mb-2">Авторские светильники, которые создают настроение.</p>
+        <p class="footer-muted mb-0">Это учебный интернет-магазин. Заказы не отправляются на сервер.</p>
+      </div>
+    </div>
+    <div class="footer-bottom mt-4 pt-3">© 2026 ATMO.</div>
+  </div>
+</footer>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
