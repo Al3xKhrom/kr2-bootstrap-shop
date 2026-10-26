@@ -12,7 +12,7 @@
 
 ## Ссылка на опубликованный проект
 
-GitHub Pages:
+GitHub Pages: https://al3xkhrom.github.io/kr2-bootstrap-shop/
 
 # Контрольная работа №2
 
